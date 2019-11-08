@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+ .row
+ {
+    margin-left: 20px;
+    margin-top: 24px;
+ }
+
+.container
+{
+    margin-top: 72px;
+}
+footer
+{
+    text-align: center;
+    background-color: grey;
+    height: 40px;
+    margin-top: 10px;
+}
+img{
+    width: 200px !important;
+    height: 250px;
+}
+.card
+{
+    width: 100px !important;
+}
