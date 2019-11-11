@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Products } from '../product/product';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor() { }
+  constructor() {}
 
-getProducts() {
-
-  const product: Array<Products> = [
+private product: Array<Products> = [
     { name: 'Timex',
     image: 'https://rukminim1.flixcart.com/image/452/542/js6e1e80/watch/v/p/f/022-xtreme-original-imafds6nghmxey5f.jpeg?q=50',
     description: 'Men\'s watch',
@@ -78,6 +77,13 @@ getProducts() {
     },
 
    ];
-  return product;
+getProducts() {
+  return this.product;
+ }
+
+ add(pro: Products) {
+  this.product.push(pro);
 }
+
+
 }
