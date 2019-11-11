@@ -1,0 +1,8 @@
+<img src="{{item.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <h4 class="card-text">₹ {{item.price}}</h4>
+          <p class="card-text">{{item.description}}</p>
+          <button href="#" class="btn btn-primary" [disabled]="!item.isAvailable">Add to Cart</button>
+          <button routerLink= 'product-details' class="btn btn-danger">Details</button>
+        </div>

@@ -1,13 +1,7 @@
 <div class="container">
-        <div class="row">
-          <div class="col-sm-4 card " style="width: 18rem;" *ngFor="let item of product">
-            <img src="{{item.image}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{item.name}}</h5>
-              <h4 class="card-text">₹ {{item.price}}</h4>
-              <p class="card-text">{{item.description}}</p>
-              <button href="#" class="btn btn-primary" [disabled]="!item.isAvailable">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="row">
+    <div class="col-sm-4 card " style="width: 18rem;" *ngFor="let item of product" >
+      <app-product-details [item]=item></app-product-details>
+    </div>
+    </div>
+</div>
