@@ -7,7 +7,7 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./contain.component.css']
 })
 export class ContainComponent implements OnInit {
-  count;
+  count = 0;
   product;
   constructor(private service: ProductService) { }
   displayProducts(): void {
@@ -19,8 +19,9 @@ export class ContainComponent implements OnInit {
   deleted(event) {
     this.displayProducts();
   }
-  updateCount(count) {
+  increaseCount(id) {
     this.count++;
     console.log(this.count);
-    }
+    
+  }
 }

@@ -1,11 +1,10 @@
-<img src="{{item.imageUrl}}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{item.title}}</h5>
-          <h4 class="card-text">{{item.price}}</h4>
-          <p class="card-text">{{item.description}}</p>
-          <button [routerLink]="['add-product',item.id]"  class="btn btn-primary">Edit</button>
-          <button [routerLink]="['product-details',item.id]" class="btn btn-info">Details</button><br>
-          <button   class="btn btn-warning" (click)="updateCart()">Add to Cart( {{count}} )</button>
-          <button  class="btn btn-danger" (click)="delete(item.id)" >Delete</button>
-
-        </div>
+<img src="{{item?.imageUrl}}" class="card-img-top" alt="...">
+<div class="card-body" *ngIf="item">
+  <h5 class="card-title">{{item?.title}}</h5>
+  <h4 class="card-text">{{item?.price}}</h4>
+  <p class="card-text">{{item?.description}}</p>
+  <button [routerLink]="['add-product', item.id]" class="btn btn-primary">Edit</button>
+  <button [routerLink]="['product-details', item.id]" class="btn btn-info">Details</button><br>
+  <button class="btn btn-warning" (click)="updateCart(item.id )">Add to Cart( {{count}} )</button>
+  <button class="btn btn-danger" (click)="delete(item.id )">Delete</button>
+</div>
