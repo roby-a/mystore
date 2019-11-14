@@ -3,7 +3,7 @@
   <form action="/" [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
     <div class="form-group">
       <label for="text">Name:</label>
-      <input type="text" class="form-control"  formControlName="name" id="name" placeholder="Enter name" name="name">
+      <input type="text" class="form-control"  formControlName="title" id="name" placeholder="Enter name" name="name">
     </div>
     <div class="form-group">
       <label for="number">Price:</label>
@@ -11,13 +11,21 @@
     </div>
     <div class="form-group">
       <label for="text">Image URL:</label>
-      <input type="text" class="form-control" formControlName="image" id="name" placeholder="Enter URL" name="image">
+      <input type="text" class="form-control" formControlName="imageUrl" id="name" placeholder="Enter URL" name="image">
     </div>
     <div class="form-group">
       <label for="text">Description:</label>
-      <input type="textarea" class="form-control" formControlName="description" id="name" placeholder="Enter Description" name="description">
+      <input type="textarea" rows="5" class="form-control" formControlName="description" id="name" placeholder="Enter Description" name="description">
     </div>
+    <label for="text">Is Available:</label><br>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked value="true">True
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" value="false">False
+    </label><br>
     
     <button type="submit" class="btn btn-primary">Submit</button>
+
   </form>
 </div>

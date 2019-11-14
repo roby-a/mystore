@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 const appRoutes: Routes = [
 {
 path: '',
@@ -18,10 +19,13 @@ component: ContainComponent
   component: AddProductComponent
 },
 {
+  path: 'add-product/:id',
+  component: AddProductComponent
+},
+{
   path: 'product-details/:id',
   component: ProductDetailsComponent
 },
-
 ];
 
 @NgModule({
@@ -35,6 +39,7 @@ component: ContainComponent
   ],
   imports: [
     BrowserModule ,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes) ,
     ReactiveFormsModule
